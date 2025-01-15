@@ -6,16 +6,16 @@ on:
   push:
     branches:
       - develop
-  jobs:
-    linting-job:
-      runs-on : ubuntu-latest
-      steps:
-        - name: step of lintinng
-          run: echo "allah always help me"
-    buid-job:
-      needs: "linting-job"
-      runs-on: ubuntu-latest
-      steps:
-        - name: Step1 of build jobs
-          run : echo "step1 of build job"
+jobs:
+  linting-job:
+    runs-on : ubuntu-latest
+    steps:
+      - name: step of lintinng
+        run: echo "allah always help me"
+  buid-job:
+    needs: "linting-job"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step1 of build jobs
+        run : echo "step1 of build job"
       
